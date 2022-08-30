@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcef5a9e-219f-4738-bfc9-5a666d97659e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/Computer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/MusicGenre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/ClassicalMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/ClassicalMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/Music.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/RockMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/RockMusic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/TestSpring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +24,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
