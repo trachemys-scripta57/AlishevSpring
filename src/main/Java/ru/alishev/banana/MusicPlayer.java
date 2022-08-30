@@ -1,16 +1,30 @@
 package ru.alishev.banana;
 
-public class MusicPlayer {
-    private final Music music;
-// зависимость от интерфейса Music
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-              ///// IoC /////
-    public MusicPlayer(Music music) {
+@Component
+public class MusicPlayer {
+    private ClassicalMusic classicalMusic;
+    private RockMusic rockMusic;
+
+    // зависимость от интерфейса Music
+    @Autowired
+    public MusicPlayer(ClassicalMusic classicalMusic, RockMusic rockMusic) {
 // используем полиморфизм Music music
-        this.music = music;
+        this.classicalMusic = classicalMusic;
+        this.rockMusic = rockMusic;
 // присваиваем нашему полю то, что было внедрено
     }
-    public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
+//    @Autowired
+//    public void setMusic(Music music) {
+//        this.music = music;
+//    }
+
+    public String playMusic() {
+        return "Playing: " + classicalMusic.getSong();
+//        System.out.println("Playing: " + classicalMusic.getSong());
+//        System.out.println("Playing: " + rockMusic.getSong());
     }
 }
+
