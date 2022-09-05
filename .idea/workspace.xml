@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcef5a9e-219f-4738-bfc9-5a666d97659e" name="Changes" comment="пердпоследний урок Spring Core. XML+Annotations">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/SpringConfig.java" afterDir="false" />
+    <list default="true" id="fcef5a9e-219f-4738-bfc9-5a666d97659e" name="Changes" comment="последний урок Spring Core. Конфигурация без XML - только code Java + annotations">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/ClassicalMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/ClassicalMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/TestSpring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="2.6-Dependency-Injection" />
+        <entry key="$PROJECT_DIR$" value="2.14-Config_with_JavaCode_only" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662387926716</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="последний урок Spring Core. Конфигурация без XML - только code Java + annotations">
+      <created>1662388408727</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662388408728</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +113,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="пердпоследний урок Spring Core. XML+Annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="пердпоследний урок Spring Core. XML+Annotations" />
+    <MESSAGE value="последний урок Spring Core. Конфигурация без XML - только code Java + annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="последний урок Spring Core. Конфигурация без XML - только code Java + annotations" />
   </component>
 </project>
