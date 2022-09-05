@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcef5a9e-219f-4738-bfc9-5a666d97659e" name="Changes" comment="последний урок Spring Core. Конфигурация без XML - только code Java + annotations">
+    <list default="true" id="fcef5a9e-219f-4738-bfc9-5a666d97659e" name="Changes" comment="1.Создать 3й класс - жанр музыки;&#10;2.MusicPlayer хранит список музыкальных жанров не отдельными полями, а списком list;&#10;3.Создаём бин для нового жанра музки;&#10;4.Создаём бин-список муз.жанров;&#10;5.Метод playMusic() воспроизводит песню случайного муз жанра (класс Random);&#10;6.@Component, @Autowired и @ComponentScan не используем - всё вручную в конфиг.файле.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/genres/RussianMusic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/ClassicalMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/ClassicalMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/ClassicalMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/genres/ClassicalMusic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/MusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/RockMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/genres/RockMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/config/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/ru/alishev/banana/TestSpring.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +63,7 @@
       <module name="firstSpringApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.alishev.banana.*" />
+          <option name="PATTERN" value="ru.alishev.banana.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662388408728</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.Создать 3й класс - жанр музыки;&#10;2.MusicPlayer хранит список музыкальных жанров не отдельными полями, а списком list;&#10;3.Создаём бин для нового жанра музки;&#10;4.Создаём бин-список муз.жанров;&#10;5.Метод playMusic() воспроизводит песню случайного муз жанра (класс Random);&#10;6.@Component, @Autowired и @ComponentScan не используем - всё вручную в конфиг.файле.">
+      <created>1662389475323</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662389475323</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="пердпоследний урок Spring Core. XML+Annotations" />
     <MESSAGE value="последний урок Spring Core. Конфигурация без XML - только code Java + annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="последний урок Spring Core. Конфигурация без XML - только code Java + annotations" />
+    <MESSAGE value="1.Создать 3й класс - жанр музыки;&#10;2.MusicPlayer хранит список музыкальных жанров не отдельными полями, а списком list;&#10;3.Создаём бин для нового жанра музки;&#10;4.Создаём бин-список муз.жанров;&#10;5.Метод playMusic() воспроизводит песню случайного муз жанра (класс Random);&#10;6.@Component, @Autowired и @ComponentScan не используем - всё вручную в конфиг.файле." />
+    <option name="LAST_COMMIT_MESSAGE" value="1.Создать 3й класс - жанр музыки;&#10;2.MusicPlayer хранит список музыкальных жанров не отдельными полями, а списком list;&#10;3.Создаём бин для нового жанра музки;&#10;4.Создаём бин-список муз.жанров;&#10;5.Метод playMusic() воспроизводит песню случайного муз жанра (класс Random);&#10;6.@Component, @Autowired и @ComponentScan не используем - всё вручную в конфиг.файле." />
   </component>
 </project>

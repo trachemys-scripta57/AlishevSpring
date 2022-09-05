@@ -1,6 +1,7 @@
-package ru.alishev.banana;
+package ru.alishev.banana.genres;
 
 import org.springframework.stereotype.Component;
+import ru.alishev.banana.Music;
 
 @Component
 public class RockMusic implements Music {
