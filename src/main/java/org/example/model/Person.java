@@ -6,7 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity //помечает классы связанные с БД
-@Table(name = "Person") //явно указываем имя таблицы для данной сущности
+//@Table(name = "Person") //явно указываем имя таблицы для данной сущности
+@Table
 public class Person {
 
     @Id

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="false" />
+    <value-preview-text-wrapping value="true" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -28,15 +28,15 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="0f30b65b-dedf-449a-b670-9da3e1d2a65e">
-      <console name="Connection" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select * from Person;]]></console>
+    <connection id="0cb93d1f-1182-435c-9817-0d1ab3bd4f36">
+      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[insert into Person(id, name, age) values (1, 'Taras', 120);]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="0f30b65b-dedf-449a-b670-9da3e1d2a65e" />
+    <connection id="0cb93d1f-1182-435c-9817-0d1ab3bd4f36" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -67,7 +67,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="0f30b65b-dedf-449a-b670-9da3e1d2a65e" active="true" signed="true">
+      <connection id="0cb93d1f-1182-435c-9817-0d1ab3bd4f36" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />

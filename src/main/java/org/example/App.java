@@ -6,31 +6,26 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
- * Работаем с БД через Hibernate
+ * Hello world!
  */
 public class App {
     public static void main(String[] args) {
-        //передаём класс нашей сущности Person.class (из hibernate.properties)
-        Configuration configuration = new Configuration().addAnnotatedClass(Person.class);
-        //Получаем SessionFactory
-        SessionFactory sessionFactory = configuration.buildSessionFactory();
+        Configuration config = new Configuration().addAnnotatedClass(Person.class);
+
+        SessionFactory sessionFactory = config.buildSessionFactory();
         Session session = sessionFactory.getCurrentSession();
-        // из полученной SessionFactory получаем поле session для работы с Hibernate
 
         try {
-            //начинаем транзакцию
             session.beginTransaction();
-            //получаем сущность Person с id=1
+
             Person person = session.get(Person.class, 1);
+
             System.out.println(person.getName());
             System.out.println(person.getAge());
 
-            //закрываем транзакцию
             session.getTransaction().commit();
-
         } finally {
             sessionFactory.close();
-            //закрываем SessionFactory. Обычно в блоке finally
         }
     }
 }
