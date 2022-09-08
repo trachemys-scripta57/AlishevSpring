@@ -1,9 +1,13 @@
 package org.example;
 
 import org.example.model.Person;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+import java.util.List;
 
 /**
  * Hello world!
@@ -18,20 +22,26 @@ public class App {
         try {
             session.beginTransaction();
 
-//            Person person = session.get(Person.class, 2);
-//            //изменяем имя 2го пользователя
-//            person.setName("new Lubomir");
-            //удаляем 2го пользователя из таблицы
-//            session.delete(person);
+            //выводим все данные из таблицы
+//            List<Person> people = session.createQuery("FROM Person").getResultList();
+            //получаем тех, кому больше 19 лет
+//            List<Person> people = session.createQuery("FROM Person where age > 19").getResultList();
+            //получаем тех, чьё имя начинается с буквы Т
+//            List<Person> people = session.createQuery("FROM Person where name LIKE 'T%'").getResultList();
+            //получаем тех, чьё имя содержит букву l
+//            List<Person> people = session.createQuery("FROM Person where name LIKE '%l%'").getResultList();
+            //изменить имена людей старше 18 лет на test
+//            session.createQuery("update Person set name = 'test' where age > 18 ").
+//                executeUpdate();
+            //удалить из таблицы людей старше 20 лет
+            session.createQuery("delete from Person where age > 20 ").
+                    executeUpdate();
 
-            //добавляем нового пользователя в таблицу
-            Person person = new Person("Gavrila", 32);
-            session.save(person);
+//            for (Person person : people)
+//                System.out.println(person);
 
             session.getTransaction().commit();
 
-            System.out.println(person.getId());
-            System.out.println(person.getName());
         } finally {
             sessionFactory.close();
         }

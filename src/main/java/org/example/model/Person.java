@@ -23,7 +23,7 @@ public class Person {
 
     public Person() {}
 
-    //public Person(int id, String name, int age) {
+//    public Person(int id, String name, int age) {
     public Person(String name, int age) {
 //        this.id = id;
         this.name = name;
@@ -52,5 +52,14 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
