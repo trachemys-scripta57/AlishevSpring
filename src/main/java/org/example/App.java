@@ -18,15 +18,20 @@ public class App {
         try {
             session.beginTransaction();
 
-            Person person = new Person("Vasiliy", 22);
-            Person person1 = new Person("Lubomir", 34);
-            Person person2 = new Person("Klaus", 47);
+//            Person person = session.get(Person.class, 2);
+//            //изменяем имя 2го пользователя
+//            person.setName("new Lubomir");
+            //удаляем 2го пользователя из таблицы
+//            session.delete(person);
 
+            //добавляем нового пользователя в таблицу
+            Person person = new Person("Gavrila", 32);
             session.save(person);
-            session.save(person1);
-            session.save(person2);
 
             session.getTransaction().commit();
+
+            System.out.println(person.getId());
+            System.out.println(person.getName());
         } finally {
             sessionFactory.close();
         }
