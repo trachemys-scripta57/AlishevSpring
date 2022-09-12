@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/first")
+//@RequestMapping("/first") // меняет путь с http://localhost:8080/goodbye на
+//http://localhost:8080/first/goodbye ...ломает все ранее прописанные пути
 public class FirstController {
 
     @GetMapping("/hello")
@@ -14,7 +15,7 @@ public class FirstController {
     }
 
     @GetMapping("/goodbye")
-    public String goodbyePage() {
+    public String goodByePage() {
         return "first/goodbye";
     }
 }

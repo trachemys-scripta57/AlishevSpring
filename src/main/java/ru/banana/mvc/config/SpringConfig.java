@@ -22,6 +22,7 @@ public class SpringConfig implements WebMvcConfigurer {
 /* Spring сам внедрит за нас applicationContext при помощи @Autowired */
     @Autowired
     public SpringConfig(ApplicationContext applicationContext) {
+
         this.applicationContext = applicationContext;
     }
 
