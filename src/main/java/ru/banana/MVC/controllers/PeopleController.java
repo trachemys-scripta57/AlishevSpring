@@ -26,7 +26,7 @@ public class PeopleController {
         model.addAttribute("people", personDAO.index());
         return "people/index";
     }
-    @GetMapping("/id")
+    @GetMapping("{id}")
     public String show(@PathVariable("id") int id, Model model) {
         //получим одного человека по id из DAO и передадим на отображение в представление
         model.addAttribute("person", personDAO.show(id));

@@ -32,6 +32,7 @@ public class SpringConfig implements WebMvcConfigurer {
         templateResolver.setPrefix("/WEB-INF/views/");
         //задаём расширение наших представлений
         templateResolver.setSuffix(".html");
+        templateResolver.setCharacterEncoding("UTF-8");//попытка руссифицировать...
         return templateResolver;
     }
 
@@ -50,6 +51,7 @@ public class SpringConfig implements WebMvcConfigurer {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
         registry.viewResolver(resolver);
+        resolver.setCharacterEncoding("UTF-8");
     }
 }
 //данный класс полностью заменяет applicationContextMVC.xml
