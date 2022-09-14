@@ -29,5 +29,9 @@ public class PersonDAO {
                 .findAny().orElse(null);
 /* находим человека по id и если такого нет, возвращаем null */
     }
+    public void save(Person person) {
+        person.setId(++PEOPLE_COUNT);
+        people.add(person);
+    }
 }
 //обычно общается с БД. Но для примера строим коллекцию
