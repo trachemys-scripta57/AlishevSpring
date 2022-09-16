@@ -11,7 +11,7 @@ import ru.banana.MVC.models.Person;
 @RequestMapping("/people")
 public class PeopleController {
 
-    private PersonDAO personDAO;
+    private final PersonDAO personDAO;
 
     //внедряем зависимость через конструктор
     @Autowired
@@ -27,7 +27,7 @@ public class PeopleController {
         return "people/index";
     }
 
-    @GetMapping("{id}")
+    @GetMapping("{id}") //@PathVariable извлекает значение id из URL запроса
     public String show(@PathVariable("id") int id, Model model) {
         //получим одного человека по id из DAO и передадим на отображение в представление
         model.addAttribute("person", personDAO.show(id));
@@ -50,14 +50,18 @@ public class PeopleController {
     public String edit(Model model, @PathVariable("id") int id) {
         model.addAttribute("person", personDAO.show(id));
         return "people/edit";
+        /*  */
     }
 
     @PatchMapping("/{id}")
     public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id) {
         personDAO.update(id, person);
         return "redirect:/people";
+        /* ищем человека с id, меняем на значения полученные из формы с помощью
+        * @ModelAttribute */
     }
 
+    @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id) {
         personDAO.delete(id);
         return "redirect:/people";

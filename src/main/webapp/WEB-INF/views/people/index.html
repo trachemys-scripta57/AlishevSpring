@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
 <head>
     <meta charset="UTF-8">
     <title>Все люди</title>
@@ -9,6 +10,13 @@
 <div th:each="person : ${people}">
     <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">user</a>
 </div>
+
+<br/>
+<!--<br/> создаём пустую строку, отступ-->
+<hr/>
+<!--<hr/> горизонтальная линия отделяет людей от нового человека-->
+
+<a href="/people/new">Create new person</a>
 
 </body>
 </html>

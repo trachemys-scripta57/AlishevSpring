@@ -20,7 +20,7 @@ public class PersonDAO {
     }
 
     public List<Person> index() {
-        //возвращаем список people и потом через ThymLeaf отобразим в браузере
+        //возвращаем список people и потом через ThymeLeaf отобразим в браузере
         return people;
     }
 
@@ -36,13 +36,14 @@ public class PersonDAO {
 
     public void update(int id, Person updatedPerson) {
         Person personToBeUpdated = show(id);
-
+//получаем новые данные edit.html и выполняем замену
         personToBeUpdated.setName(updatedPerson.getName());
     }
 
     public void delete(int id) {
         people.removeIf(p -> p.getId() == id);
-        //
+        //проходим по каждому человеку из списка, получаем его id
+        //removeIf метод ArrayList
     }
 }
 //обычно общается с БД. Но для примера строим коллекцию
