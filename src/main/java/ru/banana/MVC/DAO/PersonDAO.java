@@ -13,10 +13,10 @@ public class PersonDAO {
     {
         people = new ArrayList<>();
 
-        people.add(new Person(++PEOPLE_COUNT, "Гавриил"));
-        people.add(new Person(++PEOPLE_COUNT, "Тарас"));
-        people.add(new Person(++PEOPLE_COUNT, "Михайло"));
-        people.add(new Person(++PEOPLE_COUNT, "Аннушка"));
+        people.add(new Person(++PEOPLE_COUNT, "Гавриил", 24, "gavr@ya.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Тарас", 52, "taras@rambler.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Михайло", 18, "mikha@mail.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Аннушка", 34, "anna@yahoo.com"));
     }
 
     public List<Person> index() {
@@ -38,6 +38,8 @@ public class PersonDAO {
         Person personToBeUpdated = show(id);
 //получаем новые данные edit.html и выполняем замену
         personToBeUpdated.setName(updatedPerson.getName());
+        personToBeUpdated.setAge(updatedPerson.getAge());
+        personToBeUpdated.setEmail(updatedPerson.getEmail());
     }
 
     public void delete(int id) {

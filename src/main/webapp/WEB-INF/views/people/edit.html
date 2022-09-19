@@ -7,13 +7,19 @@
 <body>
 
 <form th:method="PATCH" th:action="@{/people/{id}(id=${person.getId()})}" th:object="${person}">
-<!-- th: - атрибут ThymeLeaf. Потому как в HTML нет метода PATCH. Обходим... -->
-<!-- th:action - данные с этой формы посылаем на адрес /people/{id} -->
-<!-- th:object - объект person в поле th:field="*{name}"    -->
-  <label for="name">Enter name: </label>
-  <input type="text" th:field="*{name}" id="name"/>
-  <br/>
-  <input type="submit" value="Update!"/>
+    <!-- th: - атрибут ThymeLeaf. Потому как в HTML нет метода PATCH. Обходим... -->
+    <!-- th:action - данные с этой формы посылаем на адрес /people/{id} -->
+    <!-- th:object - объект person в поле th:field="*{name}"    -->
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <label for="age">Enter age: </label>
+    <input type="text" th:field="*{age}" id="age"/>
+    <br/>
+    <label for="email">Enter email: </label>
+    <input type="text" th:field="*{email}" id="email"/>
+    <br/>
+    <input type="submit" value="Update!"/>
 </form>
 
 </body>
