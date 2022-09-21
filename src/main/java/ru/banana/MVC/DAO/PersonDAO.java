@@ -90,7 +90,7 @@ public class PersonDAO {
         List<Person> people = new ArrayList<>();
 
         for (int i=0; i < 1000; i++)
-            people.add(new Person(i, "Name" + i, 30, "test" + i + "yandex.ru"));
+            people.add(new Person(i, "Name" + i, 30, "test" + i + "@yandex.ru"));
 
         return people;
     }
