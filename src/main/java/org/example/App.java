@@ -13,10 +13,10 @@ import java.util.List;
  */
 public class App {
     public static void main(String[] args) {
-        Configuration config = new Configuration().addAnnotatedClass(Person.class)
+        Configuration configuration = new Configuration().addAnnotatedClass(Person.class)
                 .addAnnotatedClass(Item.class);
 
-        SessionFactory sessionFactory = config.buildSessionFactory();
+        SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.getCurrentSession();
 
         try {
@@ -26,6 +26,7 @@ public class App {
             System.out.println(person);
 
             List<Item> items = person.getItems();
+            //после вызова getItems() Hibernate делает SQL запрос в БД
             System.out.println(items);
 
             session.getTransaction().commit();

@@ -14,6 +14,7 @@ public class Item {
     @Column(name = "item_name")
     private String itemName;
 
+    //owning side - владеющая сторона
     @ManyToOne
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person owner;

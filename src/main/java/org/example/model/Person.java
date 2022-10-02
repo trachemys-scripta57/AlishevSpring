@@ -19,6 +19,7 @@ public class Person {
     @Column(name = "age")
     private int age;
 
+    //связываем сущности Person и Item
     @OneToMany(mappedBy = "owner")
     private List<Item> items;
 
