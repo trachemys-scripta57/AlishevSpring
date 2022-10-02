@@ -1,8 +1,7 @@
 package org.example.model;
 
 import jakarta.persistence.*;
-
-import java.util.List;
+import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name = "Person")
@@ -19,11 +18,12 @@ public class Person {
     @Column(name = "age")
     private int age;
 
-    //связываем сущности Person и Item
-    @OneToMany(mappedBy = "owner")
-    private List<Item> items;
+    @OneToOne(mappedBy = "person")
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE) //сохраняется и паспорт и человек
+    private Passport passport;
 
-    public Person() {}
+    public Person() {
+    }
 
     public Person(String name, int age) {
         this.name = name;
@@ -32,15 +32,6 @@ public class Person {
 
     public int getId() {
         return id;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
     }
 
     public void setId(int id) {
@@ -63,11 +54,22 @@ public class Person {
         this.age = age;
     }
 
-    public List<Item> getItems() {
-        return items;
+    public Passport getPassport() {
+        return passport;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
+    public void setPassport(Passport passport) {
+        this.passport = passport;
+        passport.setPerson(this);
+        //двусторонняя связь человек и паспорт
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

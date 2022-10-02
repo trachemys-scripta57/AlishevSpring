@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.model.Item;
+import org.example.model.Passport;
 import org.example.model.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,7 +12,7 @@ import org.hibernate.cfg.Configuration;
 public class App {
     public static void main(String[] args) {
         Configuration configuration = new Configuration().addAnnotatedClass(Person.class)
-                .addAnnotatedClass(Item.class);
+                .addAnnotatedClass(Passport.class);
 
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -20,17 +20,12 @@ public class App {
         try {
             session.beginTransaction();
 
-            Person person = session.get(Person.class, 4);
-            Item item = session.get(Item.class, 1);
-            //удаляем товар у старого владельца. Для корректировки кеша
-            item.getOwner().getItems().remove(item);
+            Person person = new Person("TestPerson2", 24);
+            Passport passport = new Passport(7654321);
 
-            //назначаем нового владельца для этого товара
-            //пораждает SQL запрос
-            item.setOwner(person);
+            person.setPassport(passport); //связь установлена с двух сторон
 
-            //у нового владельца будет новый товар. Корректировка кеша
-            person.getItems().add(item);
+            session.save(person); //
 
             session.getTransaction().commit();
         } finally {
