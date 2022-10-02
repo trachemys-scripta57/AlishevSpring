@@ -11,7 +11,8 @@ import org.hibernate.cfg.Configuration;
  */
 public class App {
     public static void main(String[] args) {
-        Configuration configuration = new Configuration().addAnnotatedClass(Person.class)
+        Configuration configuration = new Configuration()
+                .addAnnotatedClass(Person.class)
                 .addAnnotatedClass(Passport.class);
 
         SessionFactory sessionFactory = configuration.buildSessionFactory();
@@ -20,12 +21,8 @@ public class App {
         try {
             session.beginTransaction();
 
-            Person person = new Person("TestPerson2", 24);
-            Passport passport = new Passport(7654321);
-
-            person.setPassport(passport); //связь установлена с двух сторон
-
-            session.save(person); //
+            Person person = session.get(Person.class, 1);
+            session.remove(person);
 
             session.getTransaction().commit();
         } finally {
